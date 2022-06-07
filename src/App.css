@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: crimson;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  box-sizing: border-box;
+  box-shadow: 5px 3px 5px 3px;
+}
+.card:hover {
+  transition: 5s ease-in-out;
+  cursor: pointer;
+}
+.search {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.inputField {
+  max-width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  box-shadow: 2px 3px 25px;
+  color: brown;
+  font-size: 20px;
+  border-bottom: 2px;
+  line-break: 2px;
+  padding-left: 15px;
+  font-weight: 800;
+}
+
+.inputField:hover {
+  transform: scale(1.1);
+}
+.info {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+}
+.cityname {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  line-height: 50px;
+  margin-block-end: 40px;
+  font-size: 55px;
+  color: rgb(55, 9, 160);
+  text-shadow: 12px 18px 20px;
+  font-family: cursive;
+}
+.locationIcon {
+  transform: scale(2);
+  color: rgb(8, 8, 8);
+}
+
+.temp {
+  color: rgb(194, 60, 19);
+  text-shadow: 12px 18px 20px;
+  font-family: cursive;
+}
+.min_max_temp {
+  color: rgb(19, 16, 48);
+  text-shadow: 12px 18px 20px;
+  font-family: cursive;
+}
+.NotListedLocationIcon {
+  transform: scale(2);
+}
+.notFound {
+  font-size: 35px;
+  position: relative;
+  letter-spacing: 2px;
+  display: flex;
+  top: -20%;
+  text-shadow: 11px 1px 9px white;
+  flex-direction: column;
+  align-items: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.wave1 {
+  opacity: 0.1;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50%;
+  border-radius: 43%;
+  animation: drift 5000ms infinite linear;
+  z-index: 1;
+}
+
+.wave2 {
+  opacity: 0.2;
+  position: absolute;
+  top: 148%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+
+.ballBounce {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  top: 30%;
+  left: 30px;
+  animation: ballbounce 3000ms infinite alternate;
+  z-index: 1;
+  transform-origin: 50%;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.ballBounce1 {
+  position: absolute;
+  background-color: red;
+  top: 20%;
+  left: 170px;
+  animation: ballbounce 4000ms infinite alternate;
+  z-index: 1;
+  width: 50px;
+  transform-origin: 50%;
+  border-radius: 50%;
+  opacity: 0.3;
+  height: 50px;
+  background-color: green;
+}
+
+.ballBounce2 {
+  position: absolute;
+  background-color: yellow;
+  top: 70%;
+  left: 70%;
+  opacity: 0.1;
+  animation: ballbounce 4000ms infinite alternate;
+  z-index: 1;
+  width: 50px;
+  transform-origin: 50%;
+  border-radius: 50%;
+  opacity: 0.3;
+  height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ballbounce {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
